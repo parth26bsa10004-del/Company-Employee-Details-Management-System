@@ -1,0 +1,92 @@
+records = []
+
+while True:
+    print("\n--- EMPLOYEE MANAGEMENT SYSTEM ---")
+    print("1. Add Employee")
+    print("2. Display All Employees")
+    print("3. Search Employee by ID")
+    print("4. Update Salary")
+    print("5. Delete Employee")
+    print("6. Priority Employee (Top Earners)")
+    print("7. Search by Department")
+    print("8. Exit")
+    
+    choice = input("Select option (1-8): ").strip()
+
+    if choice == '1':
+        e_id = input("ID: ").strip()
+        e_name = input("Name: ").strip()
+        e_dept = input("Department: ").strip()
+        try:
+            e_sal = float(input("Salary: "))
+            records.append([e_id, e_name, e_dept, e_sal])
+            print("Saved record...")
+        except ValueError:
+            print("Invalid salary! Record not added.")
+
+    elif choice == '2':
+        if not records:
+            print("No records present.")
+            continue
+        print("\nID\tName\tDept\tSalary")
+        for r in records:
+            print(f"{r[0]}\t{r[1]}\t{r[2]}\t{r[3]}")
+
+    elif choice == '3':
+        target = input("Enter ID: ").strip()
+        matches = [r for r in records if r[0] == target]
+        if matches:
+            emp = matches[0]
+            print(f"Details -> ID: {emp[0]}, Name: {emp[1]}, Dept: {emp[2]}, Pay: {emp[3]}")
+        else:
+            print("ID not found in system.")
+
+    elif choice == '4':
+        target = input("Target ID: ").strip()
+        for emp in records:
+            if emp[0] == target:
+                try:
+                    emp[3] = float(input("New Salary: "))
+                    print("Salary updated...")
+                except ValueError:
+                    print("Invalid input! Salary not updated.")
+                break
+        else:
+            print("No matching ID...")
+
+    elif choice == '5':
+        target = input("ID to delete: ").strip()
+        for index, item in enumerate(records):
+            if item[0] == target:
+                del records[index]
+                print("Successfully deleted...")
+                break
+        else: 
+            print("ID does not exist...")
+
+    elif choice == '6':
+        if not records:
+            print("No records present.")
+            continue
+        max_sal = max(r[3] for r in records)
+        top_earners = [r for r in records if r[3] == max_sal]
+        print("\n--- PRIORITY EMPLOYEE(S) ---")
+        for emp in top_earners:
+            print(f"ID: {emp[0]} | Name: {emp[1]} | Dept: {emp[2]} | Salary: {emp[3]}")
+
+    elif choice == '7':
+        target = input("Enter Department: ").strip()
+        matches = [r for r in records if r[2].lower() == target.lower()]
+        if matches:
+            print(f"\n--- Employees in {target} ---")
+            for emp in matches:
+                print(f"ID: {emp[0]} | Name: {emp[1]} | Salary: {emp[3]}")
+        else:
+            print("No employees found in this department.")
+    
+    elif choice == '8':
+        print("Have a good day...")
+        break
+        
+    else:
+        print("Choice error, Try again...")
