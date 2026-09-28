@@ -1,0 +1,73 @@
+--- EMPLOYEE MANAGEMENT SYSTEM ---
+1. Add Employee
+2. Display All Employees
+3. Search Employee by ID
+4. Update Salary
+5. Delete Employee
+6. Priority Employee (Top Earners)
+7. Search by Department
+8. Exit
+Select option (1-8):  1
+ID:  101
+Name:  parth
+Department:  cse
+Salary:  909099
+Saved record...
+
+--- EMPLOYEE MANAGEMENT SYSTEM ---
+1. Add Employee
+2. Display All Employees
+3. Search Employee by ID
+4. Update Salary
+5. Delete Employee
+6. Priority Employee (Top Earners)
+7. Search by Department
+8. Exit
+Select option (1-8):  1
+ID:  102
+Name:  hgjhs
+Department:  cse
+Salary:  898989
+Saved record...
+
+--- EMPLOYEE MANAGEMENT SYSTEM ---
+1. Add Employee
+2. Display All Employees
+3. Search Employee by ID
+4. Update Salary
+5. Delete Employee
+6. Priority Employee (Top Earners)
+7. Search by Department
+8. Exit
+Select option (1-8):  7
+Enter Department:  cse
+
+--- Employees in cse ---
+ID: 101 | Name: parth | Salary: 909099.0
+ID: 102 | Name: hgjhs | Salary: 898989.0
+
+--- EMPLOYEE MANAGEMENT SYSTEM ---
+1. Add Employee
+2. Display All Employees
+3. Search Employee by ID
+4. Update Salary
+5. Delete Employee
+6. Priority Employee (Top Earners)
+7. Search by Department
+8. Exit
+Select option (1-8):  6
+
+--- PRIORITY EMPLOYEE(S) ---
+ID: 101 | Name: parth | Dept: cse | Salary: 909099.0
+
+--- EMPLOYEE MANAGEMENT SYSTEM ---
+1. Add Employee
+2. Display All Employees
+3. Search Employee by ID
+4. Update Salary
+5. Delete Employee
+6. Priority Employee (Top Earners)
+7. Search by Department
+8. Exit
+Select option (1-8):  8
+Have a good day...
